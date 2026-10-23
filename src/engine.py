@@ -8,7 +8,7 @@ class MonteCarloEngine:
         self.model = model
         self.option = option
         
-    def price(self, num_paths: int, seed: int = 42):
+    def price(self, num_paths: int, seed: int = 67):
         S_T = self.model.generate_terminal_prices(self.option.maturity, num_paths, seed)
         payoffs = self.option.payoff(S_T)
         
